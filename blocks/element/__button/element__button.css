@@ -1,0 +1,10 @@
+.element__button {
+  width: 22px;
+  height: 19px;
+  align-self: center;
+  background-image: url(../../../images/logo/element__button/element__button.svg);
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+
+  border: 0;
+}
