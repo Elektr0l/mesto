@@ -1,10 +1,10 @@
-.info__Edit-Button {
+.profile__edit-button {
   margin: 0 0 0 18px;
   display: flex;
   align-self: center;
   width: 24px;
   height: 24px;
-  background-image: url(../../../images/logo/info__Edit-Button/info__Edit-Button.svg);
+  background-image: url(../../../images/logo/profile__edit-button/profile__edit-button.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px;
@@ -13,7 +13,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  .info__Edit-Button {
+  .profile__edit-button {
     width: 18px;
     height: 18px;
     margin: 4px 0 0 10px;

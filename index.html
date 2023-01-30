@@ -12,25 +12,24 @@
       <img
         class="header__logo"
         src="./images/logo/header__logo/header__logo.svg"
-        alt="Mesto"
+        alt="Место"
       />
-      <div class="header__line"></div>
     </header>
     <main class="content">
       <section class="profile">
         <img
-          class="profile__Avatar"
+          class="profile__avatar"
           src="./images/profile__Avatar/image.jpg"
           alt="Фотопортрет Жак-Ив Кусто"
         />
-        <div class="Info">
-          <div class="Info__Wrapper">
-            <p class="Info__value-name">Жак-Ив Кусто</p>
-            <button class="Info__Edit-Button button"></button>
+        <div class="profile__info">
+          <div class="profile__wrapper">
+            <h1 class="profile__value-name">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button button" type="button"></button>
           </div>
-          <p class="Info__value-description">Исследователь океана</p>
+          <p class="profile__value-description">Исследователь океана</p>
         </div>
-        <button class="profile__Add-Button button"></button>
+        <button class="profile__add-button button" type="button"></button>
       </section>
       <section class="elements">
         <ul class="elements__wrapper">
@@ -41,7 +40,7 @@
               alt="Вид на Сентинский храм"
             />
             <div class="element__wrapper">
-              <p class="element__text">Карачаевск</p>
+              <h2 class="element__text">Карачаевск</h2>
               <button type="button" class="element__button button"></button>
             </div>
           </li>
@@ -52,7 +51,7 @@
               alt="Гора на фоне заката"
             />
             <div class="element__wrapper">
-              <p class="element__text">Гора Эльбрус</p>
+              <h2 class="element__text">Гора Эльбрус</h2>
               <button type="button" class="element__button button"></button>
             </div>
           </li>
@@ -63,7 +62,7 @@
               alt="Белалакая гора в России"
             />
             <div class="element__wrapper">
-              <p class="element__text">Домбай</p>
+              <h2 class="element__text">Домбай</h2>
               <button type="button" class="element__button button"></button>
             </div>
           </li>
@@ -74,7 +73,7 @@
               alt="Гора на фоне заката"
             />
             <div class="element__wrapper">
-              <p class="element__text">Гора Эльбрус</p>
+              <h2 class="element__text">Гора Эльбрус</h2>
               <button type="button" class="element__button button"></button>
             </div>
           </li>
@@ -85,7 +84,7 @@
               alt="Белалакая гора в России"
             />
             <div class="element__wrapper">
-              <p class="element__text">Домбай</p>
+              <h2 class="element__text">Домбай</h2>
               <button type="button" class="element__button button"></button>
             </div>
           </li>
@@ -96,7 +95,7 @@
               alt="Вид на Сентинский храм"
             />
             <div class="element__wrapper">
-              <p class="element__text">Карачаево-Черкесия республика</p>
+              <h2 class="element__text">Карачаево-Черкесия республика</h2>
               <button type="button" class="element__button button"></button>
             </div>
           </li>
@@ -110,19 +109,23 @@
       <div class="popup__container">
         <button class="popup__close-button button" type="button"></button>
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__content">
-          <input class="popup__value-name" name="Name" type="text" />
+        <form class="popup__content" method="post" action="URL">
           <input
-            class="popup__value-description"
+            class="popup__input popup__input_type_name"
+            name="Name"
+            type="text"
+          />
+          <input
+            class="popup__input popup__input_type_description"
             name="description"
             type="text"
           />
-          <button class="popup__save-button button" type="button">
+          <button class="popup__save-button button" type="submit">
             Сохранить
           </button>
         </form>
       </div>
     </div>
-    <script src="./script/index.js"></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>

@@ -1,24 +1,22 @@
-.popup__value-name {
+.popup__input_type_description {
   width: 100%;
-  margin: 0 0 30px;
+  margin: 0 0 48px;
   padding: 0 0 9px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  box-sizing: border-box;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.popup__value-name::placeholder {
+.popup__input_type_description::placeholder {
   color: black;
 }
 
 @media screen and (max-width: 320px) {
-  .popup__value-name {
-    font-style: normal;
-    font-weight: 400;
+  .popup__input_type_description {
+    margin: 0 0 45px;
     font-size: 14px;
     line-height: 17px;
   }
