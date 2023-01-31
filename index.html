@@ -109,7 +109,12 @@
       <div class="popup__container">
         <button class="popup__close-button button" type="button"></button>
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__content" method="post" action="URL">
+        <form
+          class="popup__content"
+          method="post"
+          action="URL"
+          name="popup_content"
+        >
           <input
             class="popup__input popup__input_type_name"
             name="Name"
@@ -120,12 +125,12 @@
             name="description"
             type="text"
           />
-          <button class="popup__save-button button" type="submit">
+          <button type="submit" class="popup__save-button button">
             Сохранить
           </button>
         </form>
       </div>
     </div>
-    <script src="./script/script.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
