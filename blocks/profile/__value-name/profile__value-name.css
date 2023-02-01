@@ -12,15 +12,12 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 660px) {
   .profile__value-name {
-    font-size: calc((100vw - 320px) / (720 - 320) * (42 - 27) + 27px);
-    line-height: calc((100vw - 320px) / (720 - 320) * (48 - 33) + 33px);
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .profile__value-name {
-    margin: 5px auto 0;
+    margin: 5px 0 0;
+    max-width: 189px;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
   }
 }

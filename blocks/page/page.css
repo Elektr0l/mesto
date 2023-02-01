@@ -12,3 +12,5 @@
 
   text-rendering: optimizeLegibility;
 }
+
+/* Страница ломалась из за бага связанного с pixel perfect */
