@@ -32,88 +32,25 @@
         <button class="profile__add-button button" type="button"></button>
       </section>
       <section class="elements">
-        <ul class="elements__wrapper">
-          <li class="element">
-            <img
-              class="element__image"
-              src="images/element__image/kirill-pershin-1088404-unsplash.jpg"
-              alt="Вид на Сентинский храм"
-            />
-            <div class="element__wrapper">
-              <h2 class="element__text">Карачаевск</h2>
-              <button type="button" class="element__button button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img
-              class="element__image"
-              src="images/element__image/kirill-pershin-1404681-unsplash.jpg"
-              alt="Гора на фоне заката"
-            />
-            <div class="element__wrapper">
-              <h2 class="element__text">Гора Эльбрус</h2>
-              <button type="button" class="element__button button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img
-              class="element__image"
-              src="images/element__image/kirill-pershin-1556355-unsplash.jpg"
-              alt="Белалакая гора в России"
-            />
-            <div class="element__wrapper">
-              <h2 class="element__text">Домбай</h2>
-              <button type="button" class="element__button button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img
-              class="element__image"
-              src="images/element__image/kirill-pershin-1404681-unsplash.jpg"
-              alt="Гора на фоне заката"
-            />
-            <div class="element__wrapper">
-              <h2 class="element__text">Гора Эльбрус</h2>
-              <button type="button" class="element__button button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img
-              class="element__image"
-              src="images/element__image/kirill-pershin-1556355-unsplash.jpg"
-              alt="Белалакая гора в России"
-            />
-            <div class="element__wrapper">
-              <h2 class="element__text">Домбай</h2>
-              <button type="button" class="element__button button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img
-              class="element__image"
-              src="images/element__image/kirill-pershin-1088404-unsplash.jpg"
-              alt="Вид на Сентинский храм"
-            />
-            <div class="element__wrapper">
-              <h2 class="element__text">Карачаево-Черкесия республика</h2>
-              <button type="button" class="element__button button"></button>
-            </div>
-          </li>
-        </ul>
+        <ul class="elements__wrapper"></ul>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__text">© 2020 Mesto Russia</p>
     </footer>
-    <div class="popup">
+
+    <div class="popup popup_type_profile">
       <div class="popup__container">
-        <button class="popup__close-button button" type="button"></button>
+        <button
+          class="popup__close-button popup__close-button_profile button"
+          type="button"
+        ></button>
         <h3 class="popup__title">Редактировать профиль</h3>
         <form
-          class="popup__content"
+          class="popup__content popup__content_profile"
           method="post"
           action="URL"
-          name="popup_content"
+          name="popup_content_profile"
         >
           <input
             class="popup__input popup__input_type_name"
@@ -125,12 +62,71 @@
             name="description"
             type="text"
           />
-          <button type="submit" class="popup__save-button button">
+          <button
+            type="submit"
+            class="popup__save-button popup__save-button_profile button"
+          >
             Сохранить
           </button>
         </form>
       </div>
     </div>
+
+    <div class="popup popup_type_card">
+      <div class="popup__container">
+        <button
+          class="popup__close-button popup__close-button_card button"
+          type="button"
+        ></button>
+        <h3 class="popup__title">Новое место</h3>
+        <form
+          class="popup__content popup__content_card"
+          method="post"
+          action="URL"
+          name="popup_content_card"
+        >
+          <input
+            class="popup__input popup__input_type_title"
+            name="Title"
+            type="text"
+            placeholder="Название"
+          />
+          <input
+            class="popup__input popup__input_type_link"
+            name="link"
+            type="url"
+            placeholder="Ссылка на картинку"
+          />
+          <button
+            type="submit"
+            class="popup__save-button popup__save-button_card button"
+          >
+            Создать
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_type_card-opened">
+      <div class="popup__card-container">
+        <button
+          class="popup__close-button popup__close-button_card-opened button"
+          type="button"
+        ></button>
+        <img class="popup__image" src="#" alt="" />
+        <p class="popup__image-description"></p>
+      </div>
+    </div>
+    <template class="cards-template">
+      <li class="element">
+        <button type="button" class="element__button-trash button"></button>
+        <img class="element__image" src="" alt="" />
+        <div class="element__wrapper">
+          <h2 class="element__title"></h2>
+          <button type="button" class="element__button-like button"></button>
+        </div>
+      </li>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
