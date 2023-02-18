@@ -90,6 +90,7 @@ function renderCards() {
 
     card.querySelector(".element__title").textContent = item.name;
     card.querySelector(".element__image").src = item.link;
+    card.querySelector(".element__image").alt = item.name;
     cards.append(card);
   });
 }
@@ -103,6 +104,7 @@ function addCard(event) {
 
   card.querySelector(".element__image").src = popupCardLink.value;
   card.querySelector(".element__title").textContent = popupCardTitle.value;
+  card.querySelector(".element__image").alt = popupCardTitle.value;
 
   cards.prepend(card);
   removePopup(popupCard);
@@ -115,9 +117,9 @@ function OpenPopupCard() {
       const eventTarget = event.target;
       const element = eventTarget.closest(".element");
       const elementTitle = element.querySelector(".element__title").textContent;
-
       popupCardOpenedImage.src = eventTarget.src;
       popupCardOpenedTitle.textContent = elementTitle;
+      popupCardOpenedImage.alt = elementTitle;
       popupCardOpened.classList.add("popup_opened");
     }
   });
@@ -166,7 +168,7 @@ function removePopup(popup) {
   popup.classList.remove("popup_opened");
 }
 
-//Слушатели откытие и закрытие попапов
+//Слушатели откытия и закрытие попапов
 profileEditButton.addEventListener("click", () => {
   addPopup(popupProfile);
 });
