@@ -55,34 +55,6 @@ const template = document
 //Объявление контейнера карточек
 const cards = document.querySelector(".elements__wrapper");
 
-// Массив карточек
-const initialCards = [
-  {
-    name: "Архыз",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
-  },
-  {
-    name: "Челябинская область",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
-  },
-  {
-    name: "Иваново",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
-  },
-  {
-    name: "Камчатка",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
-  },
-  {
-    name: "Холмогорский район",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
-  },
-  {
-    name: "Байкал",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-  },
-];
-
 //Функция создания карточки
 function createCard(item) {
   const card = template.cloneNode(true);
@@ -119,34 +91,8 @@ function addCard(event) {
   addTemplateCard({ name: cardTitle, link: cardLink });
   popupCardTitle = removePopup(popupCard);
 }
-// function renderCards() {
-//   initialCards.forEach((item) => {
-//     const card = template.cloneNode(true);
 
-//     card.querySelector(".element__title").textContent = item.name;
-//     card.querySelector(".element__image").src = item.link;
-//     card.querySelector(".element__image").alt = item.name;
-//     cards.append(card);
-//   });
-// }
-// renderCards();
-
-// //Добавление карточки
-// function addCard()
-// function addCard(event) {
-//   event.preventDefault();
-
-//   const card = template.cloneNode(true);
-
-//   card.querySelector(".element__image").src = popupCardLink.value;
-//   card.querySelector(".element__title").textContent = popupCardTitle.value;
-//   card.querySelector(".element__image").alt = popupCardTitle.value;
-
-//   cards.prepend(card);
-//   removePopup(popupCard);
-// }
-// popupCardOpenedImage
-// // Открытие картинки в попап
+// Открытие картинки в попап
 function openPopupCard(item) {
   popupCardOpenedImage.src = item.link;
   popupCardOpenedImage.alt = item.name;
