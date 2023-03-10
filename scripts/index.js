@@ -29,6 +29,8 @@ const popupCardOpenedTitle = document.querySelector(
 const popupSaveButtonProfile = document.querySelector(
   ".popup__save-button_profile"
 );
+const popupSaveButtonCard = document.querySelector(".popup__save-button_card");
+
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileAddButton = document.querySelector(".profile__add-button");
 
@@ -79,6 +81,7 @@ function addCard(event) {
   const cardLink = popupCardLink.value;
   addTemplateCard({ name: cardTitle, link: cardLink });
   removePopup(popupCard);
+  event.target.reset();
 }
 
 // Открытие картинки в попап
@@ -143,6 +146,8 @@ profileEditButton.addEventListener("click", () => {
 
 profileAddButton.addEventListener("click", () => {
   addPopup(popupCard);
+  popupSaveButtonCard.setAttribute("disabled", true);
+  popupSaveButtonCard.classList.add("popup__save-button_inactive");
 });
 
 //Слушатели на кнопки закрытия попапов
