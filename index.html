@@ -51,17 +51,32 @@
           method="post"
           action="URL"
           name="popup_content_profile"
+          novalidate
         >
-          <input
-            class="popup__input popup__input_type_name"
-            name="Name"
-            type="text"
-          />
-          <input
-            class="popup__input popup__input_type_description"
-            name="description"
-            type="text"
-          />
+          <div class="popup__set">
+            <input
+              class="popup__input popup__input_type_name"
+              name="Name"
+              type="text"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span class="popup__input-error popup__input-error_name"></span>
+          </div>
+          <div class="popup__set">
+            <input
+              class="popup__input popup__input_type_description"
+              name="description"
+              type="text"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span
+              class="popup__input-error popup__input-error_type_description"
+            ></span>
+          </div>
           <button
             type="submit"
             class="popup__save-button popup__save-button_profile button"
@@ -84,19 +99,34 @@
           method="post"
           action="URL"
           name="popup_content_card"
+          novalidate
         >
-          <input
-            class="popup__input popup__input_type_title"
-            name="Title"
-            type="text"
-            placeholder="Название"
-          />
-          <input
-            class="popup__input popup__input_type_link"
-            name="link"
-            type="url"
-            placeholder="Ссылка на картинку"
-          />
+          <div class="popup__set">
+            <input
+              class="popup__input popup__input_type_title"
+              name="Title"
+              type="text"
+              placeholder="Название"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <span
+              class="popup__input-error popup__input-error_type_title"
+            ></span>
+          </div>
+          <div class="popup__set">
+            <input
+              class="popup__input popup__input_type_link"
+              name="link"
+              type="url"
+              placeholder="Ссылка на картинку"
+              required
+            />
+            <span
+              class="popup__input-error popup__input-error_type_link"
+            ></span>
+          </div>
           <button
             type="submit"
             class="popup__save-button popup__save-button_card button"
@@ -127,6 +157,7 @@
         </div>
       </li>
     </template>
+    <script src="./scripts/validate.js"></script>
     <script src="./scripts/cards.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
